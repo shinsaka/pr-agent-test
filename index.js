@@ -6,10 +6,13 @@ const rl = readline.createInterface({
 });
 
 rl.question('何か入力してください: ', (answer) => {
-  if (answer.toLowerCase() === 'dog') {
+  const lowerCaseAnswer = answer.toLowerCase();
+  if (lowerCaseAnswer === 'dog') {
     console.log('ワンワン！');
+  } else if (lowerCaseAnswer === 'cat') {
+    console.log('ニャー！');
   } else {
-    console.log(`"${answer}" ですね。犬の鳴き声ではありません。`);
+    console.log(`"${answer}" ですね。犬や猫の鳴き声ではありません。`);
   }
 
   rl.close();
